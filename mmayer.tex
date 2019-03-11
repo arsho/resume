@@ -1,0 +1,273 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.3, 30 April 2017) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options.
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{dirtytalk}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={SlateGrey}
+}
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{SlateGrey}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Ahmedur Rahman Shovon}
+\tagline{}
+% Cropped to square from 
+\photo{2.5cm}{sho}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+\email{shovon.sylhet@gmail.com}
+\phone{+8801731246426}
+  %\mailaddress{Dhaka, Bangladesh}
+\location{Dhaka, Bangladesh}
+\homepage{\href{https://arshovon.com}{arshovon.com}}
+  \\
+\linkedin{\href{https://www.linkedin.com/in/arshovon/}{linkedin.com/in/arshovon}}
+%\homepage{arsho.github.io}
+  %\twitter{@marissamayer}
+\github{\href{https://github.com/arsho/}{github.com/arsho}} 
+\stackoverflow{\href{https://stackoverflow.com/users/3129414/arsho}{stackoverflow.com/u/3129414}}
+
+% I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[mmayer-p1sidebar]{Experience}
+
+\cvevent{Software Engineer}{Cefalo}{December 2017 -- Ongoing}{Dhaka, Bangladesh}
+\begin{itemize}
+\item I am a consultant to NHST Media Group. Our team is continuously developing and maintaining five publications of this Norwegian media conglomerate. We follow agile methodologies to carry out the tasks in a disciplined manner. 
+\item  Mostly working with Python (Django, Django REST Framework), JavaScript (React, jQuery) and various CI/CD tools to automate application deployment process.
+\end{itemize}
+
+\divider
+
+\cvevent{Software Engineer}{Codalo}{October 2016 -- November 2017}{Dhaka, Bangladesh}
+\begin{itemize}
+\item Worked on the development of an Education as a Service(EaaS) application. 
+\item Additionally, I developed real time fingerprint based attendance system with instant messaging service.
+\end{itemize}
+
+\divider
+
+\cvevent{Freelancer}{Upwork}{April 2015 --  Present}{Dhaka, Bangladesh}
+\begin{itemize}
+\item Working on a contractual basis. I am involved in web and data driven application development. 
+\item I have developed custom plugins and data scrappers as per clients' requirements.
+\end{itemize}
+
+\medskip
+
+\cvsection{Education}
+
+\cveducation{MSc\ in  Information Technology}{Jahangirnagar University}{2015 -- 2016}{CGPA-3.67(4.00)}
+
+\divider
+
+\cveducation{BSc\ in  Information Technology}{Jahangirnagar University}{2011  -- 2015}{CGPA-3.73(4.00)}
+
+%\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+%\wheelchart{1.5cm}{0.5cm}{%
+ % 10/13em/accent!30/Sleeping \& dreaming about work,
+  %25/9em/accent!60/Resolving different issues,
+  %5/12em/accent!10/Watching movie,
+  %20/12em/accent!40/Spending time with family,
+  %5/8em/accent!20/Reading books,
+  %30/9em/accent/Office work at\ Cefalo,
+  %5/8em/accent!20/Baking cupcakes
+%}
+
+\clearpage
+
+\cvsection[page2sidebar]{Publications}
+%\nocite{*}
+%\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+\begin{itemize}
+\item \emph{Ahmedur Rahman Shovon}, Shanto Roy, Tanusree Sharma and Md. Wahiduzzaman, \say{A RESTful E-Governance Application Framework for People Identity Verification in Cloud}, International Conference on Cloud Computing-2018, Seatle, USA. 
+\\
+ISBN: 978-3-319-94295-7
+\\
+Published in: \href{https://link.springer.com/chapter/10.1007%2F978-3-319-94295-7_19}{Springer Lecture notes in Computer Science Book Series}
+
+\divider
+\item Shanto Roy, \emph{Ahmedur Rahman Shovon} and Md. Whaiduzzaman, \say{Combined approach of Tokenization and Mining to secure and optimize Big Data in Cloud Storage}, IEEE R10 Humanitarian Technology Conference (R10 - HTC) - 2017. 
+\\ 
+DOI: 10.1109/R10-HTC.2017.8288912
+\\
+Published in: \href{http://ieeexplore.ieee.org/document/8288912/}{IEEE}
+\end{itemize}
+\medskip
+\cvsection{Projects}
+% \cvproject {title}, {description}, {role}, {url}, {technologies}
+\cvproject
+{Tradewinds}
+{TradeWinds is the world's biggest shipping news service, publishing both online news and a printed weekly newspaper, that covers shipping as a global industry.}
+{developer}
+{\href{http://www.tradewindsnews.com/}{tradewindsnews.com}}
+{Django, React JS, jQuery, MySQL}
+\divider
+
+\cvproject
+{Upstream}
+{The leading global oil, gas and energy news resource. Covering the latest oil and gas news including shale, lng, drilling, exploration and production.}
+{developer}
+{\href{http://www.upstreamonline.com/}{upstreamonline.com}}
+{Django, React JS, jQuery, MySQL}
+\divider
+
+\cvproject
+{Recharge}
+{Recharge provides business intelligence for the renewable-energy industries, that matter most to the wind and solar sectors.}
+{developer}
+{\href{http://www.rechargenews.com/}{rechargenews.com}}
+{Django, React JS, jQuery, MySQL}
+\divider
+
+\cvproject
+{Easy C}
+{A real time web and mobile application to learn C programming language.}
+{team leader}
+{\href{https://github.com/arsho/EasyC/}{github.com/arsho/EasyC}}
+{PHP, jQuery, MySQL, Android SDK}
+\divider
+
+\cvproject
+{Bangla, AutoLike, CopyUSB}
+{PyPI(Python Package Index) enlisted Python packages.}
+{creator}
+{\href{https://pypi.python.org/pypi/bangla/}{Bangla}, \href{https://pypi.python.org/pypi/autolike/}{AutoLike}, \href{https://pypi.python.org/pypi/copyusb/}{CopyUSB}}
+{Python}
+\divider
+
+\cvproject
+{Type Speed}
+{One minute typing test Facebook app with popular 5000 English words.}
+{creator}
+{\href{https://apps.facebook.com/type_speed/}{apps.facebook.com/type\_speed/}}
+{jQuery, Facebook Graph API, Heroku}
+\divider
+
+\cvproject 
+{Bangladesh Electronics Olympiad}
+{A national competition for undergraduate students.}
+{creator}
+{\href{http://www.eo-bd.org/}{eo-bd.org}}
+{PHP, MySQL, jQuery}
+\divider
+
+
+\cvproject
+{Cookie Cleaner}
+{A Google Chrome extension to remove cookies with hard reload.}
+{creator}
+{\href{https://chrome.google.com/webstore/detail/cookie-cleaner/mkmmimjebjhpilmnfoiaaaeimnejbkmh}{Extension in Chrome store}}
+{JavaScript}
+
+
+%\divider\item \textbf{\href{https://wordpress.org/plugins/wp-font-resizer/}{WP-Font-Resizer}} -
+%\textit{ A Wordpress plugin to resize font size of view port. (creator)}
+%\divider
+%\item \textbf{\href{https://github.com/arsho/dictmate}{Dictmate}} - 
+%\textit{English to English and English to Bangla Dictionary. (creator)}
+
+%\nocite{*}
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+%\divider
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+%\divider
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+% \divider
+
+%\cvskill{German}{3}
+
+
+\end{document}
